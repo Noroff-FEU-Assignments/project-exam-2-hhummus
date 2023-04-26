@@ -1,0 +1,68 @@
+.sectionTwo, 
+.sectionThree{
+margin-top: 5rem;
+}
+.sectionTwo{
+    padding: 0 0.70rem;
+}
+.sectionOne {
+    background-color: #e9ecef;
+    padding: 5rem 0;
+}
+
+.search,
+.feed {
+    margin-top: 2rem;;
+}
+
+.feedTitle {
+    color: #B56A03;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.feedNav .col{
+    margin-top: 1rem;
+}
+
+.chooseFeed{
+    text-decoration: none;
+    color: grey;
+    padding: 0.5rem;
+}
+
+.chooseFeed:hover, 
+.chooseFeed:active {
+    background-color: darkgray;
+    color: black;
+}
+
+.input{
+    border: none;
+    background-color: #F8F7F7;
+    padding: 1rem;
+}
+
+.feedButtonContainer {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.SearchAndPostInputForm legend{
+    color: #1B8ED6;
+}
+
+
+/* if bigger than xx change settings*/
+@media screen and (min-width: 769px) {
+.SearchAndPostInputForm{
+    width: 40vw;
+    margin: 0 auto;
+}
+
+.feedButtonContainer {
+    width: 70vw;
+}
+
+}

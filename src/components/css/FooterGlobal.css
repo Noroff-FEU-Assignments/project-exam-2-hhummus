@@ -1,0 +1,16 @@
+.footerGlobal {
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.footerSectionTwo {
+    border-top: 1px solid #80808021;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+}
+
+.visitMyGit {
+    color: #1B8ED6;
+    border: none;
+    text-decoration: none;
+}

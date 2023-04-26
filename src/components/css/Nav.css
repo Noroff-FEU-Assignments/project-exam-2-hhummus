@@ -1,0 +1,14 @@
+.navigation {
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+
+  .buttonContainer {
+    border: none;
+    background-color: white;
+
+  }
+  .buttonContainer:active,
+  .buttonContainer .active {
+    border-bottom: 2px solid blue;
+  }

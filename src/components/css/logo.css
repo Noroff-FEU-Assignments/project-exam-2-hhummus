@@ -1,0 +1,16 @@
+.logo{
+    color: #1B8ED6;
+    font-size: 16px;
+}
+
+#logout{
+    font-size: 16;
+    color: #070606;
+    background: none;
+    border: none;
+}
+
+@media screen and (min-width: 769px) {
+    
+      
+    }

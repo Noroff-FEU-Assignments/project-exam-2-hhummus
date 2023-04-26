@@ -1,0 +1,16 @@
+.unFollowBtn { 
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.goBack {
+    background-color: #b56b039d; 
+    border: none;
+    border-radius:0.2ch ;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-weight: 800;
+}
+
