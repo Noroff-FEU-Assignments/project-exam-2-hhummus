@@ -18,7 +18,7 @@
     "web-vitals": "^2.1.4",
     "yup": "^1.0.1"
   },
-  "homepage": "https://hhummus.github.io/project-exam-2-hhummus",
+  "homepage": "https://noroff-feu-assignments.github.io/project-exam-2-hhummus",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
