@@ -9,7 +9,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="feed" element={<FeedPage />} />
-        <Route path="/" element={<LoginRegister />} />
+        <Route path="/index.html" element={<LoginRegister />} />
         <Route path="/feed/your-profile/:name" element={<ProfilePage />} />
         <Route path="/feed/profiles/:name" element={<UsersPage />} />
 
