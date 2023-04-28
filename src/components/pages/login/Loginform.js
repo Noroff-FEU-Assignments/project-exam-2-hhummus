@@ -2,10 +2,11 @@ import { baseUrl, authEndpoint } from "../../constants/Api";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from "yup";
-const errorLogin = document.getElementById("tryAgain");
+import "../../css/Login.css";
 
 // ------ using formik and yup -------- //
 const LoginForm = () => {
+  const errorLogin = document.getElementById("tryAgain");
   const navigate = useNavigate();
 
     const formik = useFormik({
@@ -35,12 +36,15 @@ const LoginForm = () => {
                         // saved to localStorage
                         const token = data.accessToken; 
                         const name = data.name;
+
                         localStorage.setItem('myToken', token); 
                         localStorage.setItem('name', name)
+                        
                         // going to feed page if response is ok
-                        navigate("feed");
-                        // refreshing page to resolve issue with fetching API when logging in
-                        window.location.reload()
+                        navigate("/feed");
+                        
+                         // refreshing page to resolve issue with Bearer null  when logging in
+                         window.location.reload() 
                     } 
                     if(!response.ok) {
                         errorLogin.style.display = "block";
@@ -54,9 +58,9 @@ const LoginForm = () => {
     });
 
     return (
+      <>
+      <small id="tryAgain">Something went wrong. Email or password incorrect.</small>
         <form onSubmit={formik.handleSubmit}>
-          <small id="tryAgain">Something went wrong. Email or password incorrect.</small>
-
           <label htmlFor="email" className="labelLogin">Email</label>
           <input pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Only Noroff emails can register"
             id="email"
@@ -88,6 +92,7 @@ const LoginForm = () => {
            name="loginButton">
             Log in</button>      
         </form>
+      </>
       );
 }
 export default LoginForm;

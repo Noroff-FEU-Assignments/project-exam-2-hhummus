@@ -63,10 +63,12 @@ function UpdateBanner() {
                      
                         <label htmlFor="banner"></label>
                         <input
+                        pattern="https://.*" 
+                        title="Must be a link containing www, and end with .jpg"
                         id="banner"
                         name="banner"
                         type="text"
-                        placeholder="Must be a valid URL..."
+                        placeholder="www.some-website/banner-photo.jpg"
                         className="bannerInput"
                         onChange={formik.handleChange}
                         value={formik.values.banner}

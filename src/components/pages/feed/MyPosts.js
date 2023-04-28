@@ -39,7 +39,7 @@ const MyPosts = () => {
     return (
     <div className="feedContainer">  
       
-            <Link to={`/feed/your-profile/${name}`} id="visitYourProfil">Go to my profile</Link>
+        <Link to={`/feed/your-profile/${name}`} id="visitYourProfil">Go to my profile</Link>
        
         {!myPosts.length <= 0 ?myPosts.map(post => (      
         <div className="posts" id={post.id} data-target={Number(post.id)} key={post.id}>

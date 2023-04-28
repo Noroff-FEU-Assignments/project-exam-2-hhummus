@@ -42,11 +42,12 @@ export default function UsersPage() {
         if(response.ok) {
             setProfile(data);
             setLoading(false);
+            
             //if banner image
             imgOk = (data.banner) ? <img src={data.banner} alt="banner display" className="bannerImage" /> : <p className="bannerText">Doesn't seem like {data.name} has uploaded a banner photo just yet.</p>
-            console.log(data, imgOk)
+           
             // if avatar img
-            avatarOk = (data.avatar) ? <img src={data.banner} alt="Avatar display" className="avatarImage" /> :  <FontAwesomeIcon icon={faUser} className="fa-solid fa-3x avatarIcon" />
+            avatarOk = (data.avatar) ? <img src={data.avatar} alt="Avatar display" className="avatarImage" /> :  <FontAwesomeIcon icon={faUser} className="fa-solid fa-3x avatarIcon" />
             console.log(data)
         } 
         } catch (err) {

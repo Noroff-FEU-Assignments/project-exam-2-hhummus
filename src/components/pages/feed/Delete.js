@@ -25,7 +25,6 @@ export default function DeleteMyPost(props) {
         }
     }
     
-
     return (
         <div className="col-3 editYourPost">
         <button type="button" className="deleteButtonFirst" data-toggle="modal" data-target="#deleteMyPost" >
@@ -41,7 +40,6 @@ export default function DeleteMyPost(props) {
                 <div className="modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title" id="exampleModalLongTitle">Are you sure you wany to delete this post?</h5>
-                        
                     </div>
                     <div className="modal-body">
                         <button onClick={deleteit}
@@ -57,5 +55,5 @@ export default function DeleteMyPost(props) {
             </div>
         </div>
     </div>
-      )
+    )
 }

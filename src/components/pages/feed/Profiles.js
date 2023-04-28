@@ -52,7 +52,6 @@ return (
                         <div className="col-4 profileBtn">
                             <FollowUnfollowButton followers={profile.followers} profileName={profile.name} />
                         </div>  
-              
                 </div>
             </div>
         ))}

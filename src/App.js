@@ -8,12 +8,12 @@ const App = () => {
   return (
     <HashRouter>
       <Routes>
-        <Route path="feed" element={<FeedPage />} />
+        <Route path="/feed" element={<FeedPage />} />
         <Route path="/" element={<LoginRegister />} />
         <Route path="/feed/your-profile/:name" element={<ProfilePage />} />
         <Route path="/feed/profiles/:name" element={<UsersPage />} />
 
-        <Route path="*" element={<div>feil</div>} /> 
+        <Route path="*" element={<div>Please check that your paths are correct before trying again.</div>} /> 
       </Routes>
     </HashRouter>
   );

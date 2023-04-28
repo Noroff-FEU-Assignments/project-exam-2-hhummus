@@ -2,13 +2,11 @@ import { baseUrl, register } from "../../constants/Api";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from "yup";
-export let token = '';
-const errorLogin = document.getElementById("tryAgain");
-
 
 // ------ using formik and yup -------- //
 const RegisterForm = () => {
   const navigate = useNavigate();
+  const errorLogin = document.getElementById("tryAgain");
   
     const formik = useFormik({
         initialValues: {
@@ -42,12 +40,18 @@ const RegisterForm = () => {
                  console.log(data)
                     if(response.ok) {
                         // saved to localStorage
-                        token = data.accessToken; 
+                        const token = data.accessToken; 
+                        const name = data.name;
+
                         localStorage.setItem('myToken', token); 
-                        localStorage.setItem('name', data.name)
+                        localStorage.setItem('name', name)
+                       
 
                         // going to feed page if response is ok
-                        navigate("feed");
+                        navigate("/feed");
+
+                        // refreshing page to resolve issue with Bearer null  when logging in
+                        window.location.reload() 
                     } 
                     if(!response.ok) {
                         errorLogin.style.display = "block";
@@ -61,9 +65,9 @@ const RegisterForm = () => {
     });
 
     return (
+      <>
+      <small id="tryAgain">Something went wrong. Please check that all values are correct.</small>
         <form onSubmit={formik.handleSubmit}>
-          <small id="tryAgain">Something went wrong. Please check that all values are correct.</small>
-
           <label htmlFor="email" className="labelLogin">Email</label>
           <input pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Only Noroff emails can register"
             id="email"
@@ -119,6 +123,7 @@ const RegisterForm = () => {
            name="loginButton">
             Register and log in</button>        
         </form>
+        </>
       );
 }
 export default RegisterForm;

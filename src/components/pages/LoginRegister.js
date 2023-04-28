@@ -2,7 +2,6 @@ import { useState } from "react";
 /* Login and register form */ 
 import LoginForm from "./login/Loginform";
 import RegisterForm from "./login/Registerform";
-import "../../components/css/Login.css";
 import FooterGlobal from "../constants/footer";
 
 export default function LoginPage() {

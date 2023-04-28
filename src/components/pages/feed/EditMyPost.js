@@ -31,9 +31,10 @@ function EditMyPost(props) {
                   const response = await fetch(baseUrl + PostEntryEndpoint + '/' + props.postId, settings);
                   const data = await response.json();
              
-                
                     if(response.ok) {
                         console.log(data)
+                        alert('Succesfully edited your post')
+                        window.location.reload();
                     } 
                 } catch (err) {
                   console.log('error', err);
@@ -59,7 +60,7 @@ function EditMyPost(props) {
                     <h5 className="modal-title" id="exampleModalLongTitle">Edit your Post</h5>
                 </div>
                 <div className="modal-body">
-                    <form onSubmit={formik.handleSubmit}  className="container">
+                    <form onSubmit={formik.handleSubmit} className="container">
                     <small id="tryAgain">Check your wifi network and try again.</small>
 
                     <label htmlFor="title">Title</label>
@@ -106,15 +107,4 @@ function EditMyPost(props) {
 </div>
   )
 }
-
-export default EditMyPost
-
-
-
-
-
-
-
-
-
-
+export default EditMyPost;
