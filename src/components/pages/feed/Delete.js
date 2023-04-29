@@ -17,8 +17,8 @@ export default function DeleteMyPost(props) {
         const data = await response.json();
        
         if(response.ok) {
-            console.log(data)
-            alert("You succesfully deleted your post!")
+            console.log(data);
+            alert("You succesfully deleted your post!");
             window.location.reload();
         } 
         } catch (err) {
