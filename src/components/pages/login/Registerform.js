@@ -20,7 +20,7 @@ const RegisterForm = () => {
         validationSchema: yup.object({
             email: yup.string().email().required("You have to fill in your email."),
             password: yup.string().min(8, 'Too short').required(),
-            password2: yup.string().oneOf([yup.ref('password')]).required(),
+            repeatPassword: yup.string().oneOf([yup.ref('password')]).required("Passwords doesn't match"),
             name: yup.string().required("Please fill in a name")
             
           }),
@@ -66,7 +66,7 @@ const RegisterForm = () => {
 
     return (
       <>
-      <small id="tryAgain">Something went wrong. Please check that all values are correct.</small>
+      <small id="tryAgain">It seems that this email is already used to make a profil. Please choose another email and try again.</small>
         <form onSubmit={formik.handleSubmit}>
           <label htmlFor="email" className="labelLogin">Email</label>
           <input pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Only Noroff emails can register"
@@ -104,16 +104,16 @@ const RegisterForm = () => {
               <small className="error">{formik.errors.password}</small>
             ) : null}
 
-            <label htmlFor="password2" className="labelLogin">Repeat password</label>
+            <label htmlFor="repeatPassword" className="labelLogin">Repeat password</label>
             <input 
-            id="password2"
-            name="password2"
+            id="repeatPassword"
+            name="repeatPassword"
             type="password"
             onChange={formik.handleChange}
-            value={formik.values.password2}
+            value={formik.values.repeatPassword}
             />
-            {formik.errors.password2 ? (
-              <small className="error">{formik.errors.password2}</small>
+            {formik.errors.repeatPassword? (
+              <small className="error">{formik.errors.prepeatPassword}</small>
             ) : null}
 
           <button 
