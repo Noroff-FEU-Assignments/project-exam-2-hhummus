@@ -12,7 +12,7 @@ export const FooterGlobal = () => {
         <div className="row footerSectionTwo">
             <div className="col">
                 <small>
-                    Deployed with Githup Pages
+                    Deployed with Netlify
                 </small>
             </div>
             <div className="col">
