@@ -3,7 +3,7 @@
 ## How to
 
 1. You need to log in to have access to the app. 
-      + First time using the app you have to register your email and make a password. After this you'll be automatically logged in. 
+      + First time using the app you have to register your email and make a password. Remember to use a *@stud.noroff.no* email. After this you'll be automatically logged in. 
       + When you have registered an email you can use the login field as normally. 
 
 ### A registered user 
