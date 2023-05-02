@@ -2,13 +2,22 @@
 
 ## How to
 
-1. You need to log in to have access to this app. 
-      -- First time using the app you have to register your email and make a password. After this you'll be logged in. 
-      -- When you have registered an email you can use the login field as normally. 
+1. You need to log in to have access to the app. 
+      + First time using the app you have to register your email and make a password. After this you'll be automatically logged in. 
+      + When you have registered an email you can use the login field as normally. 
 
 ### A registered user 
 
-As a registered and logged in user you can make posts to your profile and see them in your feed. You can edit them and delete them. You can post comments on other users post. You can update your banner image as well as your avatar. You can search for profiles and posts. And you can follow and unfollow profiles. 
+As a logged in user you can
+
+1. Create posts and see them in your feed. 
+2. You can edit and delete your posts. 
+3. You can post comments on other users post. 
+4. You can update your banner image as well as your avatar. 
+5. You can search for profiles and posts by name. 
+6. You can follow and unfollow profiles. 
+7. You can visit other profiles.
+8. You can visit your own profile.
 
 ### This app is hosted on Netlify
 
